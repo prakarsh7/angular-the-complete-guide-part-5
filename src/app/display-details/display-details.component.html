@@ -1,0 +1,18 @@
+<div class="solutionContainer">
+    <button
+        (click)="onDisplayDetails()"
+        class="btn btn-primary">
+        Display Details
+    </button>
+    <p *ngIf="displayDetails">
+        Secret Password = <i>{{ password }}</i>
+    </p>
+    <hr>
+    <h5>User Logs:</h5>
+    <div 
+        *ngFor="let userLog of userLogs; let count = index"
+        [ngStyle]="{backgroundColor: count >= 4 ? 'cadetBlue' : 'transparent'}"
+        [ngClass]="{'white-text': count >= 4}">
+        {{ userLog }}
+    </div>
+</div>
