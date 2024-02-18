@@ -9,12 +9,9 @@ export class DisplayDetails {
     displayDetails = false;
     password = 'chocolate';
     userLogs: string[] = [];
-    userLogsCount = 0;
-
     onDisplayDetails() {
         this.displayDetails = !this.displayDetails;
         const userLog = "Details diaplyed at: " + new Date();
         this.userLogs.push(userLog);
-        this.userLogsCount++;
     }
 }
